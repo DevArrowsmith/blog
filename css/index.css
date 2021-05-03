@@ -127,7 +127,7 @@ header nav {
     display: none;
     position: absolute;
     width: 6rem;
-    background: var(--grey-2);
+    background: var(--grey-1);
     right: 0;
     top: 100%;
     border-radius: 0 0 0.2rem 0.2rem;
@@ -140,12 +140,13 @@ header i:hover + nav, header i:focus + nav, header nav:hover, header nav:focus {
 }
 
 header nav>a {
-    color: var(--white);
+    color: var(--black-2);
     text-decoration: none;
     text-align: center;
     padding: 1rem 0;
 }
 
 header nav>a:hover {
-    background-color: var(--grey-3);
+    color: var(--white);
+    background-color: var(--black-2);
 }
