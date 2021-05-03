@@ -23,8 +23,7 @@ body {
 header {
     z-index: 1;
     height: 50px;
-    width: calc(100% - 2rem);
-    padding:  0 1rem;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,7 +40,8 @@ header p:first-of-type {
 header p:nth-of-type(2) {
     height: 30px;
     min-width: 30px;
-    border: 1px solid black;
+    margin-left: 0.5rem;
+    border: 1px solid var(--grey-3);
     border-radius: 20px;
     display: flex;
     flex-flow: row npwrap;
@@ -49,19 +49,11 @@ header p:nth-of-type(2) {
     align-items: center; 
 }
 
-header span {
-    padding: 0 0.2rem 0 0.3rem;
-    margin: 0 0.2rem 0 0;
-    background-color: var(--black-2);
-    color: var(--grey-1);
-    border-radius: 3px 0 0 3px;
-}
-
 header form {
     flex-grow: 100;
     height: 40px;
+    margin: 0.0.5rem;
     border-radius: 20px;
-    margin: 5px 1rem;
     background-color: var(--grey-1);
     flex-grow: 100;
     display: flex;
@@ -74,6 +66,7 @@ header form input {
     background: none;
     color: var(--black-1);
     font-size: 1rem;
+    caret-color: var(--grey-3);
 }
 
 header form input:focus {
@@ -83,6 +76,7 @@ header form input:focus {
 header form button {
     width: 40px;
     padding-right: 0.5rem;
+    color: var(--black-2);
     border: none;
     background: none;
 }
@@ -93,14 +87,63 @@ header form button:focus {
 
 header form input:focus{
     outline: none; 
-    border: 1px solid grey;
+    border: 1px solid var(--grey-3);
     border-right: none;
     border-radius: 20px 0 0 20px;
 }
 
 header form input:focus+button {
     outline: none; 
-    border: 1px solid grey;
+    border: 1px solid var(--grey-3);
     border-left: none;
     border-radius: 0 20px 20px 0;
+}
+
+header button>i {
+    width: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+header>i {
+    height: 100%;
+    width: 40px;
+    padding: 0 1rem 0 0.5rem;
+}
+
+header>i:before {
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    display: none;
+    position: absolute;
+    width: 6rem;
+    background: var(--grey-2);
+    right: 0;
+    top: 100%;
+    border-radius: 0 0 0.2rem 0.2rem;
+}
+
+header i:hover + nav, header i:focus + nav, header nav:hover, header nav:focus {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+header nav>a {
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header nav>a:hover {
+    background-color: var(--grey-3);
 }
