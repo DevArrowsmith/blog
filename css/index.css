@@ -5,6 +5,7 @@
     --grey-3: #555555;
     --black-1: #121212;
     --black-2: #242424;
+    --orange-1: #F68265;
 }
 
 * {
@@ -27,6 +28,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: var(--white);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -149,4 +151,96 @@ header nav>a {
 header nav>a:hover {
     color: var(--white);
     background-color: var(--black-2);
+}
+
+
+/* Section content will go here. */
+
+
+footer {
+    position: relative;
+    min-height: calc(100vh - 7rem - 60px);
+    width: calc(100% - 4rem);
+    padding: 2rem 2rem 5rem 2rem;
+    background-color: var(--black-2);
+    color: var(--white);
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@media (min-width: 900px) {
+    footer {
+        min-height: fit-content;
+        padding-bottom: 7rem;
+    }
+}
+
+
+footer img {
+    width: 50px;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+}
+
+footer p:first-of-type {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+footer>a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--orange-1);
+    font-weight: bold;
+}
+
+footer span {
+    padding-top: 2rem;
+}
+
+footer>span>a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+footer>span:first-of-type>a>i {
+    font-size: 2rem;
+    padding-right: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+footer>hr {
+    width: calc(100vw - 4rem);
+    border-color: var(--white);
+    margin: 1rem 0;
+}
+
+footer>div {
+    margin: 3rem 0 2rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+footer>div>p:first-of-type {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+footer>div>a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+footer>div>a:last-of-type {
+    margin-bottom: 0;
+}
+
+footer>hr:last-of-type {
+    position: absolute;
+    bottom: 2rem;
 }
