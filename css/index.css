@@ -2,6 +2,7 @@
     --white: #ffffff;
     --grey-1: #eeeeee;
     --grey-2: #777777;
+    --grey-3: #555555;
     --black-1: #121212;
     --black-2: #242424;
 }
@@ -38,10 +39,24 @@ header {
 }
 
 header form {
+    height: 40px;
+    border-radius: 20px;
+    margin: 5px 1rem;
+    background-color: var(--grey-1);
     flex-grow: 100;
     display: flex;
 }
 
 header form input {
     flex-grow: 100;
+    padding: 0 1rem;
+    border: none;
+    background: none;
+}
+
+header form button {
+    width: 40px;
+    padding-right: 0.5rem;
+    background: none;
+    border: none;
 }
