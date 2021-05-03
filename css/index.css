@@ -38,13 +38,15 @@ header p:first-of-type {
 }
 
 header p:nth-of-type(2) {
-    height: 30px;
-    min-width: 30px;
+    height: 40px;
+    min-width: 40px;
     margin-left: 0.5rem;
-    border: 1px solid var(--grey-3);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--black-1);
+    background-color: var(--grey-1);
     border-radius: 20px;
     display: flex;
-    flex-flow: row npwrap;
     justify-content: center;
     align-items: center; 
 }
